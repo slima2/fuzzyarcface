@@ -3,6 +3,7 @@ Fuzzy ArcFace: Enhancing Face Recognition with Membership-Function-Integrated An
 
 
 Paper and source code for FuzzyArcface
+![image](https://github.com/slima2/fuzzyarcface/assets/38435851/765fe0e8-18d0-4ea6-a77c-5dd736c902e5)
 
 
 Face recognition systems have significantly benefited
