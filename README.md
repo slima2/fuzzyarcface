@@ -1,6 +1,10 @@
 # fuzzyarcface
 Fuzzy ArcFace: Enhancing Face Recognition with Membership-Function-Integrated Angular Margin Loss
+
+
 Paper and source code for FuzzyArcface
+
+
 Face recognition systems have significantly benefited
 from the introduction of the ArcFace loss function, which
 enhances the discrimination capability by focusing on angular
