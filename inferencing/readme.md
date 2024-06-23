@@ -1,10 +1,14 @@
 This is the repository for the script that
-a. Generates obfuscated images from CFP and JEFF databases
-b. Generates vector representations of obfuscated images using pretraining pth files
+
+* Generates obfuscated images from CFP and JEFF databases
+
+* Generates vector representations of obfuscated images using pretraining pth files
 that varies according to tau value
 	Use fuzzyarcface_resnet101_customized4 tau 0.1 100 epochs.pth for the best face verification precision
-c. Compare obfuscated images for face verification of the same class
-d. Does this for the entire CFP and JEFF dataset
+
+* Compare obfuscated images for face verification of the same class
+
+* Does this for the entire CFP and JEFF dataset
 
 
 INFERENCING DATASETS USED
