@@ -1,25 +1,9 @@
-This is the repository for the script that
+REPOSITORY FOR INFERENCING SCRIPTS WITH ALL DATASETS AND ALL LOSS FUNCTIONS, WITH DIFFERENT AUGMENTATION TECHNIQUES
 
-* Generates obfuscated images from CFP and JEFF databases
-
-* Generates vector representations of obfuscated images using pretraining pth files
-that varies according to tau value
-	Use fuzzyarcface_resnet101_customized4 tau 0.1 100 epochs.pth for the best face verification precision
-
-* Compare obfuscated images for face verification of the same class
-
-* Does this for the entire CFP and JEFF dataset
-
-
-INFERENCING DATASETS USED
-
-CFP DATASET, CELEBRITIES DATASET FACES FRONTAL AND PROFILE http://www.cfpw.io/
-
-JEFF Japanese Female Facial expression FACE RECOGITION JAPAN https://zenodo.org/records/3451524
-
-
-NEXT TO BE USED
-
-MIT CIBCL FACE RECOGNITION, SEVERAL CLASSES http://cbcl.mit.edu/software-datasets/heisele/facerecognition-database.html
-
-CROSS AGE CELEBRITY DATASET https://www.v7labs.com/open-datasets/cacd
+Summary of the Code:
+Dataset Extraction: All datasets (LFW, CFP, JAFFE, CALFW, CPLFW) are extracted and loaded.
+Augmentations: Applied augmentations like lighting variations, pose changes, and distortions to simulate challenging conditions.
+Model Loading: Models trained with different loss functions (FuzzyArcFace, ArcFace, AdaptiveFace, etc.) are loaded for inference.
+Embedding Extraction: For each dataset, embeddings are extracted from the original and augmented images.
+Cosine Similarity Calculation: Cosine similarity between original and augmented embeddings is computed for each model.
+Saving Results: Results are stored in a CSV file for analysis.
