@@ -2,22 +2,24 @@ This is the official respository for the FuzzyArcLoss loss function implementati
 ![image](https://github.com/slima2/fuzzyarcface/assets/38435851/776670da-a214-4a46-be76-3246ac362551)
 
 
-Face recognition systems have significantly benefited from introducing the
-ArcFace loss function, which enhances the discrimination capability by focus-
-ing on angular relationships within facial feature vectors. However, ArcFace
-struggles with images positioned at or near class boundaries, such as those
-affected by occlusions, lighting, or complex facial expressions. This paper
-presents Fuzzy ArcFace, an enhanced loss function that integrates a fuzzy
-membership function into the traditional ArcFace framework. The fuzzy
-membership function dynamically adjusts the angular margin based on the
-certainty of class membership. This adjustment provides a flexible and nu-
-anced mechanism for classifying boundary cases more effectively. Extensive
-experiments on the labeled faces in the wild (LFW), Japanese female facial
-expression (JEFF), and celebrities in frontal-profile (CFP) datasets demon-
-strate that Fuzzy ArcFace consistently outperforms ArcFace, especially in
-challenging scenarios. Notably, Fuzzy ArcFace achieves the highest accuracy
-on JEFF and CFP datasets by allowing more fluctuation in margin to accom-
-modate nuanced images. These results highlight Fuzzy ArcFace’s potential
-to enhance face recognition accuracy and robustness across diverse scenarios,
-making it a promising tool for applications requiring high precision in face
-verification
+Recognition systems must cope with formidable challenges including extreme pose variations, oc-
+clusions, noise, and nuanced facial expressions. Existing fixed-margin loss functions (e.g., ArcFace)
+and certain dynamic-margin approaches (e.g., AdaptiveFace) often exhibit performance limitations
+under such conditions. To address these gaps, we propose FuzzyArcLoss, a novel loss function
+that leverages a fuzzy membership mechanism to dynamically adjust angular margins for enhanced
+adaptability and robust performance.
+Extensive experiments on four benchmarks (CPLFW, CALFW, JAFFE, CFP) confirm that
+FuzzyArcLoss consistently outperforms both fixed-margin and existing dynamic-margin methods
+(e.g., AdaptiveFace, VPL, SphereFace2, UniFace). In CPLFW and CALFW, FuzzyArcLoss achieves
+top-tier F1 Scores (up to 0.90303 and 0.9079, respectively) along with elevated recall, balancing
+precision and recall more effectively than competing algorithms. On CFP, characterized by pro-
+nounced frontal-profile differences, FuzzyArcLoss (τ = 0.9) demonstrates consistently higher recall
+under severe occlusions and compression artifacts compared to other loss functions.
+Though Uniface attains the highest F1 Score on JAFFE (0.8528), FuzzyArcLoss leads in recall
+(0.9475), underscoring its capacity to detect challenging cases involving extreme expressions, albeit
+with a slight trade-off in precision. Across all datasets and augmentations—ranging from heavy
+compression to extensive occlusions—FuzzyArcLoss exhibits remarkable robustness, highlighting the
+importance of sample-level margin adjustments for addressing complex intra-class variability and
+ambiguous scenarios. Consequently, FuzzyArcLoss emerges as a robust and highly adaptable solution
+for face recognition and related recognition tasks, paving the way for improved handling of real-world
+conditions where static or purely class-based margins fall short.
