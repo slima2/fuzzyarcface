@@ -1,4 +1,4 @@
-This is the official respository for the Fuzzy Arcface loss function implementation
+This is the official respository for the FuzzyArcLoss loss function implementation
 ![image](https://github.com/slima2/fuzzyarcface/assets/38435851/776670da-a214-4a46-be76-3246ac362551)
 
 
